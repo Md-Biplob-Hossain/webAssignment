@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UNIVERSITY OF BARISHAL</title>
+
+  <!-- Tab Logo (Favicon) -->
+  <link rel="icon" type="image/png" href="barishalLogo.png" class="rounded-circle">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <style>
+    /* Navbar Links */
+    .navbar-nav .nav-link {
+      color: black;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      font-weight: 500;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background-color: rgb(56, 56, 233);
+      color: white;
+      box-shadow: 0 4px 8px rgba(56, 56, 233, 0.4);
+    }
+
+    /* Cards Hover Lift and Shadow */
+    .card.shadow-sm {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card.shadow-sm:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Buttons Hover */
+    .btn-outline-primary {
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      border-width: 2px;
+      font-weight: 600;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: rgb(56, 56, 233);
+      color: white;
+      box-shadow: 0 6px 15px rgba(56, 56, 233, 0.5);
+    }
+
+    /* Card Images Zoom On Hover */
+    .card-img-top {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .card-img-top:hover {
+      transform: scale(1.05);
+    }
+
+
+    /* count up script --------------------------count -----------------*/
+
+    .counter-section {
+      position: relative;
+      background-image: url('counter.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 30px 0px 20px 0px;
+      overflow: hidden;
+    }
+
+    /* Overlay */
+    .counter-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* কালো light overlay, opacity 0.5 */
+      z-index: 0;
+    }
+
+    .counter-section .container {
+      position: relative;
+      z-index: 1;
+      /* overlay এর উপরে text দেখানোর জন্য */
+    }
+
+    .counter-section p {
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+  <!-- Header -->
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center bg-primary p-3">
+    <a class="navbar-brand d-flex align-items-center mb-2 mb-md-0" href="#">
+      <img src="barishalLogo.png" alt="Logo" width="40" height="40" class="me-2 rounded-circle" />
+      <span class="fw-bold fs-5 text-white">UNIVERSITY OF BARISHAL</span>
+    </a>
+    <a class="navbar-brand d-flex align-items-center mb-2 mb-md-0" href="#">
+      <img src="cseLogo.jpg" alt="Logo" width="30" height="30" class="me-2 rounded-circle" />
+      <div class="fw-bold text-white">Department of Computer Science & Engineering</div>
+    </a>
+
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top py-3">
+    <div class="container">
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="studentLogin.html">Student Login</a></li>
+
+          <!-- About -->
+          <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+
+          <!-- People Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="peopleDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">People</a>
+            <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+              <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
+              <li><a class="dropdown-item" href="staff.html">Staff</a></li>
+              <li><a class="dropdown-item" href="students.html">Students</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="research.html">Research</a></li>
+
+          <!-- Publications Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="pubDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
+            <ul class="dropdown-menu" aria-labelledby="pubDropdown">
+              <li><a class="dropdown-item" href="jurnals.html">Journals</a></li>
+              <li><a class="dropdown-item" href="conferences.html">Conferences</a></li>
+              <li><a class="dropdown-item" href="books.html">Books</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="curriculum.html">Curriculum</a></li>
+
+          <!-- Highlighted Menu -->
+          <li class="nav-item">
+            <a class="nav-link rounded px-3" href="seminer.html">Seminar/Workshop</a>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="citizens.html">Citizens Charter</a></li>
+
+          <!-- Notice Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="noticeDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Notice</a>
+            <ul class="dropdown-menu" aria-labelledby="noticeDropdown">
+              <li><a class="dropdown-item" href="#">General Notice</a></li>
+              <li><a class="dropdown-item" href="#">Exam Notice</a></li>
+              <li><a class="dropdown-item" href="#">Event Notice</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero position-relative d-flex align-items-center justify-content-center text-center text-white">
+    <!-- Background Image -->
+    <img src="academic.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Academic Image"
+      style="position:absolute; top:0; left:0; z-index:-1;">
+
+    <!-- Overlay for readability -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,0.4); z-index:-1;"></div>
+
+    <!-- Text Content -->
+    <div class="px-3">
+      <h1 class="fw-bold display-4 mb-3">Welcome our Department</h1>
+
+      <!-- Breadcrumb -->
+      <nav class="d-flex justify-content-center align-items-center mb-3">
+        <img src="home.jpg" alt="Logo" width="40" height="40" class="me-2 rounded-circle" />
+        <span class="fw-bold text-white">Home /</span>
+        <span class="fw-bold text-warning ms-1">CSE</span>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="#about" class="btn btn-primary btn-lg mt-2">Learn More</a>
+    </div>
+  </div>
+
+  <style>
+    .hero {
+      height: 80vh;
+      /* Hero section height */
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      /* Responsive text */
+    }
+  </style>
+
+  <!-- Our Teachers Section -->
+  <div class="container my-5 border shadow-lg shadow-dark">
+    <h2 class="fw-bold text-center mb-4 text-primary">
+      Department of Computer Science & Engineering
+    </h2>
+
+    <!-- Head Profile Section -->
+    <div class="container my-5">
+      <div class="row g-4 align-items-center justify-content-center" style="max-width: 1100px; margin: auto;">
+
+        <!-- Profile Card -->
+        <div class="col-12 col-md-4">
+          <div class="card shadow-lg border-0 rounded-4 h-100 text-center">
+            <div class="p-4">
+              <img src="rahatSir.jpg" class="rounded-circle shadow-sm mx-auto mb-3 d-block" alt="Department Head"
+                style="width: 170px; height:170px; object-fit: contain; background: #fff; padding: 5px; border: 4px solid #f8f9fa;" />
+
+              <h5 class="fw-bold mb-1">Dr. Rahat Hossain Faisal</h5>
+              <p class="fw-semibold text-primary mb-0">Department Head</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message Card -->
+        <div class="col-12 col-md-8">
+          <div class="card shadow-lg border-0 rounded-4 h-100">
+            <div class="card-body p-4 p-md-5">
+              <h4 class="fw-bold mb-3 text-dark">Message from the Department Head</h4>
+              <p class="text-secondary mb-4" style="line-height: 1.7;">
+                Paul T, Faisal RH and Samsuddoha M (2019): Improved Round Robin Scheduling Algorithm with Progressive
+                Time
+                Quantum. International Journal of Computer Applications, Volume 178, No. 49, September 2019, ISSN
+                0975-8887. <br><br>
+                Saha C, Faisal RH and Rahman MM. (2019): Bangla Handwritten Basic Character Recognition Using Deep
+                Convolutional Neural Network. ICIEV - 2019, Washington, USA, ISBN: 978-1-7281-0786-8, IEEE.
+              </p>
+              <a href="#" class="btn btn-primary rounded-pill fw-semibold px-4 py-2 shadow-sm">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Album Section -->
+    <div class="container my-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+        <!-- Example Card -->
+        <div class="col">
+          <div class="card shadow shadow-dark h-100 border-0 rounded-3 teacher-card">
+            <div class="teacher-img-box">
+              <img src="manjurSir.jpg" alt="Manjur Sir" class="teacher-img">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1 fw-bold">Dr. Md Manjur Ahmed</h5>
+              <p class="text-muted small mb-0">Associate Professor</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat for other teachers -->
+        <div class="col">
+          <div class="card shadow shadow-dark  h-100 border-0 rounded-3 teacher-card">
+            <div class="teacher-img-box">
+              <img src="taniaMam.png" alt="Tania Mam" class="teacher-img">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1 fw-bold">Dr. Tania Islam</h5>
+              <p class="text-muted small mb-0">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow shadow-dark  h-100 border-0 rounded-3 teacher-card">
+            <div class="teacher-img-box">
+              <img src="smasSir.jpg" alt="Tania Mam" class="teacher-img">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1 fw-bold">Md Samsuddoha</h5>
+              <p class="text-muted small mb-0">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow shadow-dark  h-100 border-0 rounded-3 teacher-card">
+            <div class="teacher-img-box">
+              <img src="irfanSir.jpg" alt="Tania Mam" class="teacher-img">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1 fw-bold">Md. Erfan</h5>
+              <p class="text-muted small mb-0">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow shadow-dark  h-100 border-0 rounded-3 teacher-card">
+            <div class="teacher-img-box">
+              <img src="soheliSir.jpg" alt="Tania Mam" class="teacher-img">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1 fw-bold">Sohely Jahan</h5>
+              <p class="text-muted small mb-0">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="card shadow shadow-dark  h-100 border-0 rounded-3 teacher-card">
+            <div class="teacher-img-box">
+              <img src="asifSir.jpg" alt="Tania Mam" class="teacher-img">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1 fw-bold">Md. Rashid Al Asif/h5>
+              <p class="text-muted small mb-0">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="card shadow shadow-dark  h-100 border-0 rounded-3 teacher-card">
+            <div class="teacher-img-box">
+              <img src="noorSir.jpg" alt="Tania Mam" class="teacher-img">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1 fw-bold">Md Mahbub E Noor</h5>
+              <p class="text-muted small mb-0">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add other teacher cards the same way -->
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Custom CSS -->
+  <style>
+    /* Profile image for Head */
+    .teacher-card img.rounded-circle {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      background: #f8f9fa;
+    }
+
+    /* Album image box */
+    .teacher-img-box {
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f8f9fa;
+    }
+
+    .teacher-img {
+      max-height: 200px;
+      width: auto;
+      object-fit: cover;
+      border-radius: .5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover effect */
+    .teacher-card {
+      transition: all .25s ease;
+    }
+
+    .teacher-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, .12);
+    }
+  </style>
+
+
+  <!-- counter section -->
+  <div class="container text-center pt-4 pb-3">
+    <h2 class="border-bottom border-bottom-primary border-2 text-primary">Department of Computer Science & Engineering
+      numbers</h2>
+
+  </div>
+
+  <div class="container-fluid counter-section">
+    <div class="container my-5">
+      <div class="row text-center">
+
+        <!-- Founded -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="p-3">
+            <i class="bi bi-bank2 display-4 text-warning mb-2"></i>
+            <h3 class="fw-bold counter" data-target="2011">0</h3>
+            <p class="mb-0">Founded</p>
+          </div>
+        </div>
+
+        <!-- Faculty Members -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="p-3">
+            <i class="bi bi-person-badge-fill display-4 text-warning mb-2"></i>
+            <h3 class="fw-bold counter" data-target="2000">0</h3><span class="fw-bold">+</span>
+            <p class="mb-0">Faculty Members</p>
+          </div>
+        </div>
+
+        <!-- Students -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="p-3">
+            <i class="bi bi-people-fill display-4 text-warning mb-2"></i>
+            <h3 class="fw-bold counter" data-target="200">0</h3><span class="fw-bold">+</span>
+            <p class="mb-0">Regular Students</p>
+          </div>
+        </div>
+
+        <!-- teacher -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="p-3">
+            <i class="bi bi-building-fill display-4 text-warning mb-2"></i>
+            <h3 class="fw-bold counter" data-target="9">0</h3>
+            <p class="mb-0">Teachers</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Count-Up Script -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // Animation speed
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
+
+  <!-- last section -->
+
+  <!-- Responsive Professional About Section -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
+          <div class="card-body">
+            <h2 class="fw-bold text-center mb-4 text-primary">About the Department</h2>
+            <p class="lead text-secondary">
+              In this modern world to compete with the world countries we need to habituate ourselves with the use of
+              technological equipment. So opening such a department (CSE) was a notable decision.
+            </p>
+            <p class="text-secondary">
+              The Department of Computer Science and Engineering is therefore aware of providing quality education.
+              The department provides an excellent and bright young brand of teachers who are deeply committed to the
+              university
+              to bring out the best graduates in academic disciplines and contribute to the development of the ICT
+              backbone of the nation.
+            </p>
+            <p class="text-secondary">
+              Our graduates are serving the nation with reputation. Currently, we are offering <strong>B.Sc.
+                (Engg.)</strong>
+              and <strong>MS</strong> degrees. However, we also dream of commencing a <strong>PhD program</strong> in
+              the future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional custom CSS -->
+  <style>
+    .card-body p {
+      line-height: 1.7;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      transition: all .2s ease;
+    }
+  </style>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <!-- University Info -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">University Of Barishal</h5>
+          <p>Kornokathi, Barishal-8254, Bangladesh</p>
+          <p><strong>Phone:</strong> 0431-2177771-77</p>
+          <p><strong>Email:</strong> registrar@bu.ac.bd</p>
+          <p><strong>Fax:</strong> 09032-56270</p>
+          <!-- Social Links -->
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Academics -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Academics</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Academic Programs</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Academic Calendar</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Journal Access</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Scholarships</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Sitemap</a></li>
+          </ul>
+        </div>
+  
+        <!-- Admission -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Admission</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Undergraduate</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Postgraduate</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Foreign Students</a></li>
+          </ul>
+        </div>
+  
+        <!-- Important Links -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Important Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Gallery</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Ministry of Education</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Prime Minister's Office</a></li>
+            <li><a href="#" class="text-white text-decoration-none">UGC</a></li>
+            <li><a href="#" class="text-white text-decoration-none">National Portal</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <hr class="border-light">
+  
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="mb-0">© 2025 University of Barishal. All Rights Reserved. 
+          <a href="#" class="text-warning text-decoration-none">Credits</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
+</body>
+
+</html>
