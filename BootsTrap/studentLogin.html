@@ -89,73 +89,160 @@
     </a>
     
   </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top py-3">
+  <div class="container">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top py-3">
-    <div class="container">
-  
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-  
-          <li class="nav-item"><a class="nav-link fw-semibold" href="../index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="studentLogin.html">Student Login</a></li>
-  
-          <!-- About -->
-          <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
-  
-          <!-- People Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="peopleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">People</a>
-            <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
-              <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
-              <li><a class="dropdown-item" href="staff.html">Staff</a></li>
-              <li><a class="dropdown-item" href="students.html">Students</a></li>
-            </ul>
-          </li>
-  
-          <li class="nav-item"><a class="nav-link fw-semibold" href="research.html">Research</a></li>
-  
-          <!-- Publications Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="pubDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
-            <ul class="dropdown-menu" aria-labelledby="pubDropdown">
-              <li><a class="dropdown-item" href="jurnals.html">Journals</a></li>
-              <li><a class="dropdown-item" href="conferences.html">Conferences</a></li>
-              <li><a class="dropdown-item" href="books.html">Books</a></li>
-            </ul>
-          </li>
-  
-          <li class="nav-item"><a class="nav-link fw-semibold" href="curriculum.html">Curriculum</a></li>
-  
-          <!-- Highlighted Menu -->
-          <li class="nav-item">
-            <a class="nav-link rounded px-3" href="seminer.html">Seminar/Workshop</a>
-          </li>
-  
-          <li class="nav-item"><a class="nav-link fw-semibold" href="citizens.html">Citizens Charter</a></li>
-  
-          <!-- Notice Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="noticeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notice</a>
-            <ul class="dropdown-menu" aria-labelledby="noticeDropdown">
-              <li><a class="dropdown-item" href="#">General Notice</a></li>
-              <li><a class="dropdown-item" href="#">Exam Notice</a></li>
-              <li><a class="dropdown-item" href="#">Event Notice</a></li>
-            </ul>
-          </li>
-  
-          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
-  
-        </ul>
-      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item"><a class="nav-link fw-semibold" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="studentLogin.html">Student Login</a></li>
+
+        <!-- About -->
+        <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+
+        <!-- People Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="#" id="peopleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">People</a>
+          <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+            <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
+            <li><a class="dropdown-item" href="#">Staff</a></li>
+            <li><a class="dropdown-item" href="#">Students</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link fw-semibold" href="research.html">Research</a></li>
+
+        <!-- Publications -->
+        <li class="nav-item"><a class="nav-link fw-semibold" href="publications.html">Publications</a></li>
+
+        <li class="nav-item"><a class="nav-link fw-semibold" href="curriculum.html">Curriculum</a></li>
+
+        <!-- Highlighted Menu -->
+        <li class="nav-item">
+          <a class="nav-link rounded px-3" href="seminar.html">Seminar/Workshop</a>
+        </li>
+
+        <li class="nav-item"><a class="nav-link fw-semibold" href="citizens.html">Citizens Charter</a></li>
+
+        <!-- Notice Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="#" id="noticeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notice</a>
+          <ul class="dropdown-menu" aria-labelledby="noticeDropdown">
+            <li><a class="dropdown-item" href="generalNotice.html">General Notice</a></li>
+            <li><a class="dropdown-item" href="examNotice.html">Exam Notice</a></li>
+            <li><a class="dropdown-item" href="eventNotice.html">Event Notice</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<!-- CSS for Active Menu States -->
+<style>
+  /* Active menu item styling */
+  .navbar-nav .nav-link.active {
+    background-color: rgb(56, 56, 233) !important;
+    color: white !important;
+    box-shadow: 0 4px 8px rgba(56, 56, 233, 0.4);
+    border-radius: 8px;
+  }
+  
+  /* Dropdown active parent */
+  .navbar-nav .nav-item.dropdown .nav-link.active {
+    background-color: rgb(56, 56, 233) !important;
+    color: white !important;
+  }
+  
+  /* Active dropdown item */
+  .dropdown-item.active {
+    background-color: rgb(56, 56, 233) !important;
+    color: white !important;
+  }
+  
+  /* Hover states remain the same */
+  .navbar-nav .nav-link:hover {
+    background-color: rgb(56, 56, 233);
+    color: white;
+    box-shadow: 0 4px 8px rgba(56, 56, 233, 0.4);
+  }
+</style>
+
+<!-- JavaScript for Active Menu Detection -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get current page filename
+  const currentPage = window.location.pathname.split('/').pop();
+  
+  // Define page mappings
+  const pageMapping = {
+    'index.html': 'Home',
+    'studentLogin.html': 'Student Login',
+    'about.html': 'About',
+    'faculty.html': 'People',
+    'staff.html': 'People', 
+    'students.html': 'People',
+    'research.html': 'Research',
+    'publications.html': 'Publications',
+    'curriculum.html': 'Curriculum',
+    'seminar.html': 'Seminar/Workshop',
+    'seminer.html': 'Seminar/Workshop', // Handle both spellings
+    'citizens.html': 'Citizens Charter',
+    'generalNotice.html': 'Notice',
+    'examNotice.html': 'Notice',
+    'eventNotice.html': 'Notice',
+    'contact.html': 'Contact'
+  };
+  
+  // Get all nav links
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  
+  // Remove any existing active classes
+  navLinks.forEach(link => link.classList.remove('active'));
+  dropdownItems.forEach(item => item.classList.remove('active'));
+  
+  // Find and activate current page
+  if (pageMapping[currentPage]) {
+    const targetText = pageMapping[currentPage];
+    
+    // Check main nav links
+    navLinks.forEach(link => {
+      if (link.textContent.trim() === targetText) {
+        link.classList.add('active');
+      }
+    });
+    
+    // Check dropdown items and activate parent
+    dropdownItems.forEach(item => {
+      if (item.getAttribute('href') === currentPage) {
+        item.classList.add('active');
+        // Also activate the parent dropdown
+        const parentDropdown = item.closest('.dropdown').querySelector('.nav-link');
+        if (parentDropdown) {
+          parentDropdown.classList.add('active');
+        }
+      }
+    });
+  }
+  
+  // Handle home page when on root
+  if (currentPage === '' || currentPage === 'index.html') {
+    document.querySelector('a[href="../index.html"]')?.classList.add('active');
+  }
+});
+</script>
+
   
 
  <!-- Hero Section -->

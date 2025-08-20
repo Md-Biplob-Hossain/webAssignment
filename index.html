@@ -129,7 +129,7 @@
 
   </div>
 
-  <!-- Navbar -->
+ <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top py-3">
   <div class="container">
     
@@ -174,7 +174,7 @@
           <a class="nav-link fw-semibold" href="./BootsTrap/research.html">Research</a>
         </li>
 
-        <!-- Publications Dropdown -->
+        <!-- Publications -->
         <li class="nav-item">
           <a class="nav-link fw-semibold" href="./BootsTrap/publications.html">Publications</a>
         </li>
@@ -214,6 +214,104 @@
     </div>
   </div>
 </nav>
+
+<!-- CSS for Active Menu Highlighting -->
+<style>
+  /* Active menu item styling */
+  .navbar-nav .nav-link.active {
+    background-color: rgb(56, 56, 233) !important;
+    color: white !important;
+    box-shadow: 0 4px 8px rgba(56, 56, 233, 0.4);
+    border-radius: 8px;
+  }
+  
+  /* Active dropdown parent */
+  .navbar-nav .dropdown .nav-link.active {
+    background-color: rgb(56, 56, 233) !important;
+    color: white !important;
+  }
+  
+  /* Active dropdown item */
+  .dropdown-item.active {
+    background-color: rgb(56, 56, 233) !important;
+    color: white !important;
+  }
+  
+  /* Keep existing hover effects */
+  .navbar-nav .nav-link:hover:not(.active) {
+    background-color: rgb(56, 56, 233);
+    color: white;
+    box-shadow: 0 4px 8px rgba(56, 56, 233, 0.4);
+  }
+</style>
+
+<!-- JavaScript for Active Menu Detection -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get current page path
+  const currentPath = window.location.pathname;
+  const currentPage = currentPath.split('/').pop();
+  
+  // Define page-to-menu mapping
+  const pageMenuMap = {
+    'index.html': 'Home',
+    'studentLogin.html': 'Student Login',
+    'about.html': 'About',
+    'faculty.html': 'People',
+    'research.html': 'Research',
+    'publications.html': 'Publications',
+    'curriculum.html': 'Curriculum',
+    'seminer.html': 'Seminar/Workshop',
+    'seminar.html': 'Seminar/Workshop',
+    'citizens.html': 'Citizens Charter',
+    'notice.html': 'Notice',
+    'contact.html': 'Contact'
+  };
+  
+  // Get all nav links and dropdown items
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  
+  // Remove existing active classes
+  navLinks.forEach(link => link.classList.remove('active'));
+  dropdownItems.forEach(item => item.classList.remove('active'));
+  
+  // Find and activate current menu
+  const currentMenuText = pageMenuMap[currentPage];
+  
+  if (currentMenuText) {
+    // Activate main nav links
+    navLinks.forEach(link => {
+      const linkText = link.textContent.trim();
+      if (linkText === currentMenuText) {
+        link.classList.add('active');
+      }
+    });
+    
+    // Handle dropdown items
+    dropdownItems.forEach(item => {
+      const href = item.getAttribute('href');
+      if (href && href.includes(currentPage)) {
+        item.classList.add('active');
+        
+        // Also activate parent dropdown
+        const parentDropdown = item.closest('.dropdown').querySelector('.nav-link');
+        if (parentDropdown) {
+          parentDropdown.classList.add('active');
+        }
+      }
+    });
+  }
+  
+  // Special case for home page
+  if (currentPath.endsWith('/') || currentPage === 'index.html' || currentPage === '') {
+    const homeLink = document.querySelector('a[href="./index.html"]');
+    if (homeLink) {
+      homeLink.classList.add('active');
+    }
+  }
+});
+</script>
 
 
   <!-- Hero Section -->
