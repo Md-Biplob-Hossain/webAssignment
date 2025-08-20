@@ -11,6 +11,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
   <style>
+  /* Show dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* nicely aligned */
+  }
+
     /* Navbar Links */
     .navbar-nav .nav-link {
       color: black;
@@ -157,7 +163,7 @@
 
           <!-- Publications Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="pubDropdown" role="button"
+            <a class="nav-link dropdown-toggle fw-semibold" href="publications.html" id="pubDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">Publications</a>
             <ul class="dropdown-menu" aria-labelledby="pubDropdown">
               <li><a class="dropdown-item" href="jurnals.html">Journals</a></li>

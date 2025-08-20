@@ -170,13 +170,13 @@
 
   <!-- Text Content -->
   <div class="px-3">
-    <h1 class="fw-bold display-4 mb-3">Student Login</h1>
+    <h1 class="fw-bold display-4 mb-3">Curriculum</h1>
 
     <!-- Breadcrumb -->
     <nav class="d-flex justify-content-center align-items-center mb-3">
       <img src="home.jpg" alt="Logo" width="40" height="40" class="me-2 rounded-circle" />
       <span class="fw-bold text-white">Home /</span>
-      <span class="fw-bold text-warning ms-1">Login Form</span>
+      <span class="fw-bold text-warning ms-1">Curriculum</span>
     </nav>
 
     <!-- CTA Button -->
@@ -196,46 +196,235 @@
 
 
 <!-- add section -->
+
 <div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <div class="card shadow-lg rounded-3">
-        <div class="card-body p-4">
-          <!-- Logo -->
-          <div class="text-center mb-3">
-            <img src="barishalLogo.png" 
-                 alt="BU Logo" width="80">
+  <!-- Page Heading -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-primary">Department of Computer Science & Engineering</h2>
+    <h4 class="fw-semibold text-dark">Full Curriculum (B.Sc. in CSE)</h4>
+    <hr class="w-25 mx-auto border-3 border-primary">
+  </div>
+
+  <!-- Curriculum Accordion -->
+  <div class="accordion" id="cseCurriculum">
+
+    <!-- 1st Year -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading1">
+        <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#year1" aria-expanded="true" aria-controls="year1">
+          1st Year
+        </button>
+      </h2>
+      <div id="year1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#cseCurriculum">
+        <div class="accordion-body">
+          <!-- 1st Year 1st Semester -->
+          <h6 class="fw-bold text-secondary mb-2">1st Semester</h6>
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-primary">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 1101</td><td>Introduction to Computer Systems</td><td>3.0</td></tr>
+                <tr><td>CSE 1102</td><td>Programming Fundamentals</td><td>3.0</td></tr>
+                <tr><td>MAT 1101</td><td>Calculus</td><td>3.0</td></tr>
+                <tr><td>PHY 1101</td><td>Physics</td><td>3.0</td></tr>
+              </tbody>
+            </table>
           </div>
-          <!-- Title -->
-          <h4 class="text-center mb-4 text-success fw-bold">BU-CSE Login</h4>
-          
-          <form>
-            <div class="mb-3">
-              <label for="username" class="form-label">Student ID / Email</label>
-              <input type="text" class="form-control" id="username" placeholder="Enter your ID or Email">
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Enter your password">
-            </div>
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="rememberMe">
-                <label class="form-check-label" for="rememberMe">Remember me</label>
-              </div>
-              <a href="#" class="small text-decoration-none">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Login</button>
-          </form>
-          <p class="text-center mt-3">Don’t have an account? <a href="register.html">Register</a></p>
+
+          <!-- 1st Year 2nd Semester -->
+          <h6 class="fw-bold text-secondary mb-2">2nd Semester</h6>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-primary">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 1201</td><td>Data Structures</td><td>3.0</td></tr>
+                <tr><td>CSE 1202</td><td>Digital Logic Design</td><td>3.0</td></tr>
+                <tr><td>MAT 1203</td><td>Linear Algebra</td><td>3.0</td></tr>
+                <tr><td>STA 1201</td><td>Statistics</td><td>3.0</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- 2nd Year -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading2">
+        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#year2" aria-expanded="false" aria-controls="year2">
+          2nd Year
+        </button>
+      </h2>
+      <div id="year2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#cseCurriculum">
+        <div class="accordion-body">
+          <!-- 2nd Year 1st Semester -->
+          <h6 class="fw-bold text-secondary mb-2">1st Semester</h6>
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-info">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 2101</td><td>Algorithms</td><td>3.0</td></tr>
+                <tr><td>CSE 2102</td><td>Computer Architecture</td><td>3.0</td></tr>
+                <tr><td>MAT 2103</td><td>Probability & Statistics</td><td>3.0</td></tr>
+                <tr><td>EEE 2101</td><td>Electrical Circuits</td><td>3.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 2nd Year 2nd Semester -->
+          <h6 class="fw-bold text-secondary mb-2">2nd Semester</h6>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-info">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 2201</td><td>Database Systems</td><td>3.0</td></tr>
+                <tr><td>CSE 2202</td><td>Operating Systems</td><td>3.0</td></tr>
+                <tr><td>CSE 2203</td><td>Microprocessors</td><td>3.0</td></tr>
+                <tr><td>CSE 2204</td><td>Discrete Mathematics</td><td>3.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3rd Year -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading3">
+        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#year3" aria-expanded="false" aria-controls="year3">
+          3rd Year
+        </button>
+      </h2>
+      <div id="year3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#cseCurriculum">
+        <div class="accordion-body">
+          <h6 class="fw-bold text-secondary mb-2">1st Semester</h6>
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-warning">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 3101</td><td>Computer Networks</td><td>3.0</td></tr>
+                <tr><td>CSE 3102</td><td>Software Engineering</td><td>3.0</td></tr>
+                <tr><td>CSE 3103</td><td>Artificial Intelligence</td><td>3.0</td></tr>
+                <tr><td>CSE 3104</td><td>Compiler Design</td><td>3.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h6 class="fw-bold text-secondary mb-2">2nd Semester</h6>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-warning">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 3201</td><td>Machine Learning</td><td>3.0</td></tr>
+                <tr><td>CSE 3202</td><td>Web Technologies</td><td>3.0</td></tr>
+                <tr><td>CSE 3203</td><td>Information Security</td><td>3.0</td></tr>
+                <tr><td>CSE 3204</td><td>Human-Computer Interaction</td><td>3.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4th Year -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading4">
+        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#year4" aria-expanded="false" aria-controls="year4">
+          4th Year
+        </button>
+      </h2>
+      <div id="year4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#cseCurriculum">
+        <div class="accordion-body">
+          <h6 class="fw-bold text-secondary mb-2">1st Semester</h6>
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-success">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 4101</td><td>Cloud Computing</td><td>3.0</td></tr>
+                <tr><td>CSE 4102</td><td>Big Data Analytics</td><td>3.0</td></tr>
+                <tr><td>CSE 4103</td><td>Computer Graphics</td><td>3.0</td></tr>
+                <tr><td>CSE 4104</td><td>Elective I</td><td>3.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h6 class="fw-bold text-secondary mb-2">2nd Semester</h6>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-success">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>Credit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CSE 4201</td><td>Thesis / Project Work</td><td>6.0</td></tr>
+                <tr><td>CSE 4202</td><td>Elective II</td><td>3.0</td></tr>
+                <tr><td>CSE 4203</td><td>Elective III</td><td>3.0</td></tr>
+                <tr><td>CSE 4204</td><td>Internship / Viva</td><td>2.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Download Button -->
+  <div class="text-center mt-5">
+    <a href="#" class="btn btn-primary px-4 py-2 shadow-sm">
+      📄 Download Full Curriculum
+    </a>
   </div>
 </div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
   
